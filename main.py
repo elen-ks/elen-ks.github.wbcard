@@ -11,7 +11,7 @@ options.add_argument("--disable-blink-features=AutomationControlled")
 
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 driver.get(SEARCH_URL)
-time.sleep(3)
+time.sleep(2)
 
 for _ in range(SCROLL_COUNT):
     driver.execute_script("window.scrollBy(0, 1200)")
@@ -25,5 +25,5 @@ for card in cards:
         driver.get(link)
         break
 
-time.sleep(10)
+time.sleep(2)
 driver.quit()
