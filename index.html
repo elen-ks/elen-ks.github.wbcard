@@ -2,19 +2,21 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>WB Auto Opener</title>
+<title>WB Redirect</title>
 </head>
 <body>
 
 <script>
-const SEARCH = "https://www.wildberries.ru/catalog/0/search.aspx?search=лонгслив%20облегающий";
-const PRODUCT = "https://www.wildberries.ru/catalog/284529226/detail.aspx";
+const SEARCH = "https://www.wildberries.ru/catalog/0/search.aspx?search=лонгслив%20облегающий&appType=1";
+const PRODUCT = "https://www.wildberries.ru/catalog/455394912/detail.aspx?appType=1";
 
-window.location.href = SEARCH;
+// сначала открываем поиск (в браузере)
+window.location.replace(SEARCH);
 
+// потом — карточку
 setTimeout(() => {
-    window.location.href = PRODUCT;
-}, 3000);
+    window.location.replace(PRODUCT);
+}, 3500);
 </script>
 
 </body>
